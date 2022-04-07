@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Advert extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'description',
+        'amount',
+        'user_id'
+    ];
+
+    public function categories(){
+        return $this->belongsToMany(Category::class);
+    }
+
+    public function seller(){
+        return $this->hasMany(User::class, 'user_id');
+    }
 }

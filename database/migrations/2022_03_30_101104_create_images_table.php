@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('advert_id');
         });
     }
 
