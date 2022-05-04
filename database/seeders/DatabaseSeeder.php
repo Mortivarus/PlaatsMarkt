@@ -7,6 +7,8 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Advert;
 use App\Models\Category;
+use App\Models\Bidding;
+use App\Models\Message;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,9 +19,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(10)->create();
-        \App\Models\Advert::factory(10)->create();
-        \App\Models\Category::factory(10)->create();
+        User::factory(10)->create();
+        Advert::factory(10)->create();
+        Category::factory(10)->create();
+        Bidding::factory(10)->create();
+        Message::factory(10)->create();
+
 
 
         $this->call([
