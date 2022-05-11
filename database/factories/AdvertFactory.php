@@ -19,7 +19,7 @@ class AdvertFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->sentence(4),
+            'title' => $this->faker->sentence(3),
             'description' => implode($this->faker->paragraphs(1)),
             'amount' => rand(10, 1000)/10,
             'user_id' => rand(1, User::count())
