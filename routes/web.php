@@ -20,6 +20,6 @@ use App\Http\Controllers\MessageController;
 
 Route::get('/', [AdvertController::class, 'index'])->name('adverts.index');
 
-
+Route::get('/adverts/{advert}', [AdvertController::class, 'view'])->name('adverts.view');
 
 require __DIR__.'/auth.php';
