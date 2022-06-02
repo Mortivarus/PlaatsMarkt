@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <x-auth-card>
+    <x-auth.auth-card>
         <x-slot name="logo">
             <a href="/">
                 <x-auth.application-logo class="w-20 h-20 fill-current text-gray-500" />
@@ -14,9 +14,9 @@
 
             <!-- Name -->
             <div>
-                <x-auth.label for="name" :value="__('Name')" />
+                <x-auth.label for="username" :value="__('Username')" />
 
-                <x-auth.input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                <x-auth.input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus />
             </div>
 
             <!-- Email Address -->
@@ -55,5 +55,5 @@
                 </x-auth.button>
             </div>
         </form>
-    </x-auth-card>
+    </x-auth.auth-card>
 </x-guest-layout>
