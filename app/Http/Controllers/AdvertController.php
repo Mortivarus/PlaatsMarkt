@@ -21,13 +21,13 @@ class AdvertController extends Controller
     }
 
     public function view(Advert $advert){
-        return view('components/adverts/advert', [
+        return view('components/adverts/show', [
             'advert' => $advert
         ]);
     }
 
     public function create(){
-        return;
+        return view('components/adverts/create');
     }
 
     public function store(StorePostRequest $request){
