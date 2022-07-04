@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->foreignId('advert_id');
+            $table->string('path');
         });
     }
 

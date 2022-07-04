@@ -1,7 +1,7 @@
 <x-layout>
     <x-section>
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <form action="/adverts/create" method="post" enctype="multipart/form-data">
+            <form action="/adverts/create" method="post">
                 @csrf
     
                 <div>
@@ -16,6 +16,11 @@
                     <x-form.input name="amount" label="amount" />
                 </div>
             </form>
+
+            <form action="/images" method="post" enctype="multipart/form-data">
+            
+            </form>
+
         </div>
 
     </x-section>
